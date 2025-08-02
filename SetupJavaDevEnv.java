@@ -22,7 +22,6 @@ import java.util.Arrays;
 public class SetupJavaDevEnv {
 
     public static void main(String[] args) {
-        // Created by Arif N Ramadhan
         System.out.println("🚀 Memulai Setup Java Development Environment...");
 
         // Update sistem
@@ -48,7 +47,6 @@ public class SetupJavaDevEnv {
     }
 
     private static void installPkg(String checkCmd, String... pkgNames) {
-        // Created by Arif N Ramadhan
         if (!isInstalled(checkCmd)) {
             System.out.println("🔧 Menginstal " + String.join(", ", pkgNames) + "...");
             runCommand("sudo", "apt", "install", "-y", String.join(" ", pkgNames));
@@ -58,7 +56,6 @@ public class SetupJavaDevEnv {
     }
 
     private static void installLombok() {
-        // Created by Arif N Ramadhan
         String lombokJar = "lombok.jar";
         File file = new File(lombokJar);
 
@@ -79,7 +76,6 @@ public class SetupJavaDevEnv {
     }
 
     private static void installJdbcDriver() {
-        // Created by Arif N Ramadhan
         String jdbcJar = "mysql-connector-j.jar";
         File file = new File(jdbcJar);
 
@@ -106,7 +102,6 @@ public class SetupJavaDevEnv {
     }
 
     private static void runCommand(String... command) {
-        // Created by Arif N Ramadhan
         try {
             ProcessBuilder builder = new ProcessBuilder(command);
             builder.redirectErrorStream(true);
